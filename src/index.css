@@ -1,0 +1,134 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* ============================================================
+   TastyGo design tokens
+   Palette: chili red + saffron on warm charcoal / cream
+   Display type: Sora (bold, geometric) | Body: Inter
+   ============================================================ */
+:root {
+  --fd-primary: #E63946;      /* chili red */
+  --fd-primary-dark: #C1121F;
+  --fd-secondary: #F4A300;    /* saffron */
+  --fd-dark: #1D1B23;         /* near-black charcoal */
+  --fd-cream: #FFF8F0;
+  --fd-success: #2A9D8F;
+  --fd-muted: #7A7580;
+  --fd-radius: 16px;
+  --bs-body-font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--fd-cream);
+  color: var(--fd-dark);
+}
+
+h1, h2, h3, h4, .display-font {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.btn-chili {
+  background-color: var(--fd-primary);
+  border-color: var(--fd-primary);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.btn-chili:hover {
+  background-color: var(--fd-primary-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-outline-chili {
+  border: 2px solid var(--fd-dark);
+  color: var(--fd-dark);
+  border-radius: 999px;
+  font-weight: 600;
+  background: transparent;
+}
+.btn-outline-chili:hover {
+  background: var(--fd-dark);
+  color: #fff;
+}
+
+.text-saffron { color: var(--fd-secondary); }
+.bg-charcoal { background-color: var(--fd-dark); }
+.bg-cream { background-color: var(--fd-cream); }
+
+.card-food, .card-restaurant {
+  border: none;
+  border-radius: var(--fd-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(29, 27, 35, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+.card-food:hover, .card-restaurant:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(29, 27, 35, 0.14);
+}
+
+.card-food img, .card-restaurant img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.category-pill {
+  border-radius: 999px;
+  border: 1.5px solid #E7E2DA;
+  padding: 0.4rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: #fff;
+  color: var(--fd-dark);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.category-pill.active {
+  background: var(--fd-dark);
+  border-color: var(--fd-dark);
+  color: #fff;
+}
+
+.hero-section {
+  background: radial-gradient(circle at 15% 20%, #2A2730 0%, var(--fd-dark) 55%);
+  border-radius: 0 0 40px 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-brand-food {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.badge-open { background: var(--fd-success); }
+.badge-closed { background: var(--fd-muted); }
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--fd-dark);
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 1;
+}
+
+footer.site-footer {
+  background: var(--fd-dark);
+  color: #cfcbd4;
+}
+footer.site-footer a { color: #fff; text-decoration: none; }
+footer.site-footer a:hover { color: var(--fd-secondary); }
